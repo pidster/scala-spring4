@@ -1,0 +1,17 @@
+
+apply plugin: 'groovy'
+apply plugin: 'war'
+
+repositories {
+	maven {
+		url 'http://repo.spring.io/snapshot'
+	}
+	mavenCentral()
+}
+
+dependencies {
+	compile "org.springframework.boot:spring-boot-starter-web:1.0.0.BUILD-SNAPSHOT"
+	compile "org.codehaus.groovy:groovy-all:2.2.1"
+
+	runtime "org.apache.tomcat.embed:tomcat-embed-jasper:7.0.47"
+}
